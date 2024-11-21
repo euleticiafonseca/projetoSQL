@@ -89,7 +89,7 @@ insert into tbClientes(codCli,nome,email,telCel)
 insert into tbClientes(codCli,nome,email,telCel)
 	values(3,'Kevin Ricardo', 'kevin.ricardo@gmail.com','96387-5469');
 insert into tbClientes(codCli,nome,email,telCel)
-	values(4,'Josue Silva','josue.silva2gmail.com','91125-8888');
+	values(4,'Josue Silva','josue.silva@gmail.com','91125-8888');
 
 insert into tbFornecedores(nome,email,telefone,cnpj)
 	values('Armarinho Fernandez','sac@afernandez.com.br','98523-8745','48.076.228/0001-91');
@@ -137,3 +137,13 @@ insert into tbVendas(valor,quantidade,dataVend,horaVend,codUsu,codProd,codCli)
 	select * from tbFornecedores;
 	select * from tbProdutos;
 	select * from tbVendas;
+
+-- inner join
+
+select func.nome as 'Nome do funcionario',uso.nome as 'Nome de usuario' 
+from tbUsuarios as uso inner join tbFuncionarios as func on uso.codFunc = func.codFunc
+where func.codFunc = 2; 
+
+select func.nome as 'Nome do funcionario',uso.nome as 'Nome de usuario' 
+from tbUsuarios as uso inner join tbFuncionarios as func on uso.codFunc = func.codFunc
+where func.nome like '%l%';
