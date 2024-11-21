@@ -29,6 +29,11 @@ desc tbFuncionarios;
 insert into tbFuncionarios(codFun,nome,email,cpf,endereco,cep,numero,bairro,cidade,estado,telefone,dataNascimento,salario)
 	values(1,'Liam Payne','luan.12@gmail.com','214.486.269-58','Rua Matilda','04429-290','888','Vila Mariana','São Paulo','SP',
 		'93144-1115','2000/05/04', 2500.60);
+	insert into tbFuncionarios(nome,email)
+		values('Ronaldo Rodrigues', 'ronaldo.rodrigues@gmail.com');
+		insert into tbFuncionarios(codFunc,email,cpf)
+			values(5,'fernando.ccunha','524.652.574-88');
+
 
 -- visualizar os registros das tabelas
 select * from tbFuncionarios;
