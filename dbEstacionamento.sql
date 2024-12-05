@@ -37,7 +37,12 @@ desc tbCarros;
 desc tbDiarias;
 
 -- alterando estrutura das tabelas
-alter table tbFuncionarios;
+alter table tbFuncionarios
 add cpf char(14);
+
+desc tbFuncionarios;
+
+alter table tbFuncionarios
+add salario decimal(9,2);
 
 desc tbFuncionarios;

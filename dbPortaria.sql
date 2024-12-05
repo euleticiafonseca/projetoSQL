@@ -147,3 +147,20 @@ where func.codFunc = 2;
 select func.nome as 'Nome do funcionario',uso.nome as 'Nome de usuario' 
 from tbUsuarios as uso inner join tbFuncionarios as func on uso.codFunc = func.codFunc
 where func.nome like '%l%';
+
+select func.nome as 'Funcionario',cli.nome as 'Cliente',prod.descricao as 'Produtos',
+vend.quantidade as 'Quantidade',vend.valor as 'Valor'
+from tbVendas as vend inner join tbFuncionarios as func on func.codFunc = vend.codUsu
+inner join tbClientes as cli on vend.codCli = cli.codCli inner join
+tbProdutos as prod on vend.codProd = prod.codProd;
+
+-- Nome do fornecedor, lote do produto , validade do produto, 
+-- email do fornecedor, quantidade de produto, 
+-- cnpj do fornecedor, preço do produto.
+ 
+-- A pergunta é para a tabela produtos
+
+select forn.nome as 'Fornecedores',prod.lote as 'Lote Produto',prod.validade as 'Validade',
+forn.email as 'E-mail',prod.quantidade as 'Quantidade',forn.cnpj as 'CNPJ Fornecedor',
+prod.preco as 'Preco'
+from tbFornecedores as forn inner join tbProdutos as prod on prod.codProd = forn.codForn;
